@@ -1,0 +1,41 @@
+<head>
+  <title>inout</title>
+</head>
+
+<body>
+  {{> hello}}
+
+  Who we have:
+  {{> those_present}}
+
+  Who we don't:
+  {{> those_absent}}
+</body>
+
+<template name="hello">
+  <div class="hello">
+    <h1><div class="greeting">Hello there, {{first}} {{last}}!</div></h1>
+    <button>click me</button>
+  </div>
+</template>
+
+<template name="those_present">
+    <ul class="present">
+        {{#each people}}
+          {{> loftie_detail}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="those_absent">
+    <ul class="absent">
+        {{#each people}}
+          {{> loftie_detail}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="loftie_detail">
+<li>{{position}}: {{name}} {{checkins}} checkins</li>
+</template>
+
