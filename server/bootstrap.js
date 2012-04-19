@@ -15,5 +15,6 @@ Meteor.startup(function () {
         Lofties.insert({name: names[i], present: here, position: i, checkins: inc, score: 0});
       }
     }
+
 });
 

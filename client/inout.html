@@ -3,21 +3,19 @@
 </head>
 
 <body id="thebody">
-    <div id="container">
         <div class="ui-layout-north">
             {{> hello}}
         </div>
+
         <div class="ui-layout-center">
           Who we have:
           {{> those_present}}
         </div>
 
-
-        <div class="ui-layout-south">
+        <div class="ui-layout-east">
           Who we don't:
           {{> those_absent}}
         </div>
-    </div>
 </body>
 
 <template name="hello">

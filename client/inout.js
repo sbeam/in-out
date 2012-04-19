@@ -25,10 +25,24 @@ Template.loftie_detail.events = {
   }
 };
 
-$(function () {
-  console.log($('#container'));
-  //$('body').layout({ applyDefaultStyles: true });
+
+Meteor.startup(function () {
+    $( function() {
+        var lay = $('body').layout({
+            name: 'outerLayout',
+            autoResize: true,
+            applyDefaultStyles: true,
+            livePaneResizing: true,
+            closable: false,
+            showDebugMessages:true,
+            center__minWidth: 75,
+            east__size: .40
+        });
+    });
 });
 
-
+//$(document).ready(function() { $( this ).on("DOMNodeInserted", "div#container", function() {
+    //console.log($('#container').attr('id'));
+//});
+//});
 
