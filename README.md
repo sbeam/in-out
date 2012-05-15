@@ -1,11 +1,11 @@
 # InOut - playing around with meteor.js #
 
-From This:
+###### From This: ######
 ![In and Out!](http://www.magnatag.com/img/pages/PEimages/PEcover.jpg)
 
-To this:
+###### To this: ######
 
-### NEW IMPROVED WITH TEH node.js and meteor ###
+## NEW IMPROVED WITH TEH node.js and meteor ##
 
 #### SEE IT LIVE ####
 
