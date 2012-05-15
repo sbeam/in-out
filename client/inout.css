@@ -1,1 +1,52 @@
 /* CSS declarations go here */
+
+#c_present, #c_absent {
+    float: left;
+    width: 48%;
+    padding-right: 1.8%;
+    border-right: 4px solid red;
+    height: 100%;
+}
+#c_absent {
+    float: right;
+    border-right: 0;
+    padding: 0;
+}
+.inner-drop {
+    clear: both;
+    border: 1px dotted #ddf;
+    min-height: 500px;
+}
+.clear {
+    clear: both;
+}
+h2 {
+    background: #333;
+    color: #fff;
+    font-size: 1em;
+    margin: 0;
+    padding: 0.8em;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    position: relative;
+    float: left;
+    border: 3px solid black;
+    padding: 1.6em;
+    height: 4em;
+    margin: 0.8em;
+    cursor: pointer;
+    background: #eee;
+}
+li.loftie em {
+    display: block;
+    font-size: 0.8em;
+    padding: 0.4em 0;
+}
+.ui-state-highlight {
+    background: #fc0;
+}

@@ -8,19 +8,29 @@
         </div>
 
         <div class="ui-layout-center">
-          Who we have:
-          {{> those_present}}
+            <div id="c_present">
+                <h2>Who we have:</h2>
+                <div class="inner-drop">
+                    {{> those_present}}
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div id="c_absent">
+                <h2>Who we don't:</h2>
+                <div class="inner-drop">
+                    {{> those_absent}}
+                    <div class="clear"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="ui-layout-east">
-          Who we don't:
-          {{> those_absent}}
-        </div>
 </body>
 
 <template name="hello">
   <div class="hello">
-    <h1><div class="greeting">Hello there, {{first}} {{last}}!</div></h1>
+    <h1><div class="greeting">Hello there, {{first}}!</div></h1>
+    <em>{{note}}</em>
     <button>click me</button>
   </div>
 </template>
@@ -42,6 +52,9 @@
 </template>
 
 <template name="loftie_detail">
-<li>{{position}}: {{name}} {{checkins}} checkins</li>
+<li class="loftie ui-draggable">
+    {{name}}
+    <em>{{checkins}} checkins</em>
+</li>
 </template>
 
