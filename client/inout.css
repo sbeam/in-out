@@ -4,7 +4,7 @@
     float: left;
     width: 48%;
     padding-right: 1.8%;
-    border-right: 4px solid red;
+    border-right: 4px solid #cab;
     height: 100%;
 }
 #c_absent {
@@ -26,6 +26,7 @@ h2 {
     font-size: 1em;
     margin: 0;
     padding: 0.8em;
+    text-align: center;
 }
 
 ul {
@@ -49,4 +50,10 @@ li.loftie em {
 }
 .ui-state-highlight {
     background: #fc0;
+}
+
+.instr {
+    text-align: center;
+    font-size: 80%;
+    font-family: monospace;
 }

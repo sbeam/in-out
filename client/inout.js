@@ -1,6 +1,7 @@
 Lofties = new Meteor.Collection("lofties");
 
-// is this the right way to attach this? probably not.
+
+// TODO is this the right way to attach this? probably not.
 Meteor.subscribe('those_absent', function() {
     $( "li.ui-draggable" ).draggable( { revert: "invalid" } );
 });
@@ -8,13 +9,14 @@ Meteor.subscribe('those_present', function() {
     $( "li.ui-draggable" ).draggable( { revert: "invalid" } );
 });
 
-Template.hello.first = function() { return Session.get('name'); };
-Template.hello.note = function() { return Session.get("note"); };
+
+
+
+Template.hello.greet = function() { return Session.get('greet'); };
 
 Template.hello.events = {
-  'click button': function () {
-      Session.set("name", 'Test Person.');
-      Session.set("note", 'Thanks for the click!');
+  'click button': function (e) {
+      Session.set("greet", $('#username').val());
   }
 };
 
@@ -23,8 +25,7 @@ Template.those_present.people = function () {
 };
 
 Template.those_absent.people = function () {
-    var peeps = Lofties.find({present: 'N'}, {sort: {score: -1, checkins: -1}});
-    return peeps;
+    return Lofties.find({present: 'N'}, {sort: {score: -1, checkins: -1}});
 };
 
 Template.loftie_detail.events = {
@@ -38,8 +39,6 @@ Template.loftie_detail.events = {
 
 
 Meteor.startup(function () {
-
-    Session.set("first", 'unk');
 
     $( function() {
         var lay = $('body').layout({

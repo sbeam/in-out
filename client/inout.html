@@ -4,12 +4,14 @@
 
 <body id="thebody">
         <div class="ui-layout-north">
+            <h1>Who's in? Who's out?</h1>
             {{> hello}}
+            <div class="instr">&lt;&mdash; drag this way or that way &mdash;&gt;</div>
         </div>
 
         <div class="ui-layout-center">
             <div id="c_present">
-                <h2>Who we have:</h2>
+                <h2>IN</h2>
                 <div class="inner-drop">
                     {{> those_present}}
                     <div class="clear"></div>
@@ -17,7 +19,7 @@
             </div>
 
             <div id="c_absent">
-                <h2>Who we don't:</h2>
+                <h2>OUT</h2>
                 <div class="inner-drop">
                     {{> those_absent}}
                     <div class="clear"></div>
@@ -29,9 +31,12 @@
 
 <template name="hello">
   <div class="hello">
-    <h1><div class="greeting">Hello there, {{first}}!</div></h1>
-    <em>{{note}}</em>
-    <button>click me</button>
+      {{#if greet}}
+        <h3><div class="greeting">Why hello, {{greet}}!</div></h3>
+      {{else}}
+        And you are? <input type="text" id="username">
+        <button>hook me up</button>
+      {{/if}}
   </div>
 </template>
 
