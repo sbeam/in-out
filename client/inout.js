@@ -1,6 +1,5 @@
 Lofties = new Meteor.Collection("lofties");
 
-
 // TODO is this the right way to attach this? probably not.
 Meteor.subscribe('those_absent', function() {
     $( "li.ui-draggable" ).draggable( { revert: "invalid" } );
@@ -51,20 +50,20 @@ Meteor.startup(function () {
             center__minWidth: 75
         });
 
-		$( "#c_present .inner-drop" ).droppable({
+        $( "#c_present .inner-drop" ).droppable({
             //activeClass: "ui-state-highlight",
             accept: "#c_absent li",
-			drop: function( event, ui ) {
+            drop: function( event, ui ) {
                 ui.draggable.trigger('inout.enter');
-			}
-		});
-		$( "#c_absent .inner-drop" ).droppable({
+            }
+        });
+        $( "#c_absent .inner-drop" ).droppable({
             //activeClass: "ui-state-highlight",
             accept: "#c_present li",
-			drop: function( event, ui ) {
+            drop: function( event, ui ) {
                 ui.draggable.trigger('inout.leave');
-			}
-		});
+            }
+        });
     });
 
 });
